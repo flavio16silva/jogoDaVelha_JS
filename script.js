@@ -74,10 +74,10 @@ function checkGame(){
         warning = 'O "x" venceu'
         playing = false               //para o jogo
     } else if(checkWinnerFor('o')){
-        warning = 'O "o" é venceu'
+        warning = 'O "o" venceu'
         playing = false
     } else if(isFull()){
-        warning = 'Teve empate'
+        warning = 'Empate'
         playing = false
     }
 }
