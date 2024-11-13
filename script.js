@@ -1,4 +1,5 @@
 // ------- Dados Iniciais -----------
+//O jogo ocorre nas variaveis do Js e o visual e mostrado pelo HTML
 //Criando um objeto com cada casa do jogo
 //tabuleiro
 let square = {
@@ -20,6 +21,7 @@ document.querySelectorAll('.item').forEach(item => { //Percorrendo o objeto
 
 
 // ---------- Funções ------------
+//Função do Click
 function itemClick(event){
     let item = event.target.getAttribute('data-item') //Pegando o atributo do elemento
     if(playing && square[item] === ''){
@@ -29,6 +31,7 @@ function itemClick(event){
     }
 }
 
+//Função que limpa tudo
 function reset() {
     warning = '' //limpar a mensagem
 
@@ -45,7 +48,7 @@ function reset() {
     renderInfo()   //redenriza as informações na tela 
 }
 
-//Varrer o tabuleiro vendo se existe algo preenchido, se existe mostrar no HTML
+//Varrer o tabuleiro vendo se existe algo preenchido, se existe mostrar no HTML(tela)
 function renderSquare(){
     for(let i in square){
       let item = document.querySelector(`div[data-item=${i}]`) //pegando cada casa do tabuleiro 
@@ -56,13 +59,13 @@ function renderSquare(){
     checkGame()
 }
 
-//Irá pegar as variaveis - vez e mensagem - e mandar na tela
+//Irá pegar as variaveis e renderizar/mostrar na tela
 function renderInfo(){
     document.querySelector('.vez').innerHTML = player
     document.querySelector('.resultado').innerHTML = warning 
 }
 
-//Irá alternar entre os valores de X e O
+//Irá alternar entre os valores de X e O - entre os jogadores
 function togglePlayer(){
     player = (player === 'x') ? 'o' : 'x'
     renderInfo()
@@ -82,7 +85,7 @@ function checkGame(){
     }
 }
 
-//Função para verificar o vencedor
+//Verificar o vencedor, atraves das possibilidades do jogo
 function checkWinnerFor(player){
     let pos = [                         //possibilidade de vitoria visto no array
         'a1,a2,a3',
@@ -110,7 +113,7 @@ function checkWinnerFor(player){
 }
 
 
-//Função para verificar se houve empate
+//Verificar se tá tudo preenchido, se tiver um item sem preencher, não tá full
 function isFull(){
     for(let i in square){
         if(square[i] === ''){ //verificando se existe algum vazio
