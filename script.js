@@ -1,5 +1,5 @@
 // ------- Dados Iniciais -----------
-//O jogo ocorre nas variaveis do Js e o visual e mostrado pelo HTML
+//O jogo ocorre nas variaveis do JS e o visual e mostrado pelo HTML
 //Criando um objeto com cada casa do jogo
 //tabuleiro
 let square = {
