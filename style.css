@@ -1,10 +1,12 @@
-* {
+/* Geral */
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+/* Corpo */
+body{
     display: flex;
     min-height: 100vh;
     justify-content: center;
@@ -13,19 +15,21 @@ body {
     background-color: #333;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+/* Titulo */
 h1 {
     color: #FFF;
     margin: 20px 0;
 }
 
-.area {
+/* Jogo */
+.area{
     width: 300px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 30px;
 }
-.area .item {
+/* Area do jogo */
+.area .item{
     width: 100px;
     height: 100px;
     display: flex;
@@ -36,42 +40,48 @@ h1 {
     color: #FFF;
     cursor: pointer;
 }
+/* ao passar do mouse - sombreamento */
 .item:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.item.t {
-    border-top: 1px solid #FFF;
+.item.t{
+    border-top: 2px solid #FFF;
 }
-.item.l {
-    border-left: 1px solid #FFF;
+.item.l{
+    border-left: 2px solid #FFF;
 }
-.item.r {
-    border-right: 1px solid #FFF;
+.item.r{
+    border-right: 2px solid #FFF;
 }
-.item.b {
-    border-bottom: 1px solid #FFF;
+.item.b{
+    border-bottom: 2px solid #FFF;
 }
-
+/* espaços das informações */
 .info {
     width: 300px;
     display: flex;
     margin-top: 30px;
     border: 1px dotted #FFF;
+    border-radius: 5px;
     padding: 10px;
+
 }
-.infoitem {
+/* separação dos titulos das infos */
+.infoitem{
     flex: 1;
 }
-.infotitulo {
+
+.infotitulo{
     text-align: center;
     color: #FFF;
     margin-bottom: 10px;
 }
-.infocorpo {
+
+.infocorpo{
     text-align: center;
     color: #FFF;
-    font-size: 20px;
+    margin-bottom: 20px;
 }
 
 .reset {
@@ -80,4 +90,5 @@ h1 {
     color: #FFF;
     padding: 10px;
     margin-top: 20px;
+    border-radius: 5px;
 }
